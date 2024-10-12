@@ -9,7 +9,9 @@ Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
 Route::post('/posts', [PostController::class, 'store'])->name('post.store');
 
-Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('post.destroy');
+Route::get('/posts/{post}', [PostController::class, 'show'])->name('post.show');
+
+Route::delete('/posts/{post}', [PostController::class, 'destroy'])->name('post.destroy');
 
  
 
