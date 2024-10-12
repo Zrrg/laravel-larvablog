@@ -7,7 +7,11 @@ use App\Http\Controllers\DashboardController;
 
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
-Route::post('/post', [PostController::class, 'store'])->name('post.create');
+Route::post('/posts', [PostController::class, 'store'])->name('post.store');
+
+Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('post.destroy');
+
+ 
 
 
 Route::get('/profile', [ProfileController::class, 'index']);

@@ -15,7 +15,7 @@ class DashboardController extends Controller
         // dump(Post::all());
         
         return view('dashboard', [
-            'posts' => Post::orderBy('created_at', 'DESC')->get()
+            'posts' => Post::orderBy('created_at', 'DESC')->paginate(5)
         ]);
             
     }

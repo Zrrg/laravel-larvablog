@@ -47,7 +47,9 @@
                 @include('shared.post-card')
             </div>
         @endforeach
-
+        <div class="mt-3">
+            {{ $posts->links()}}
+        </div>
     </div>
     <div class="col-3">
         <div class="card">

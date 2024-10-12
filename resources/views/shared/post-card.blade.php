@@ -8,7 +8,16 @@
                     <h5 class="card-title mb-0"><a href="#"> Mario
                         </a></h5>
                 </div>
+
             </div>
+            <form method="POST" action ="{{ route('post.destroy', $post->id) }}">
+            @csrf
+            @method('delete')
+                 <div>
+                    <button class="btn btn-danger btn-sm" >X</button>
+
+                </div>
+            </form>
         </div>
     </div>
     <div class="card-body">

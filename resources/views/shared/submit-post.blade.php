@@ -1,6 +1,6 @@
 <h4> Submit new post: </h4>
 <div class="row">
-    <form action="{{ route('post.create') }}" method="post">
+    <form action="{{ route('post.store') }}" method="post">
         @csrf
     <div class="mb-3">
         <textarea name="post" class="form-control" id="idea" rows="3"></textarea>
