@@ -15,10 +15,12 @@
             @method('delete')
                  <div>
                     <button class="btn btn-danger btn-sm" >X</button>
+                    <a href="{{ route('post.show', $post->id) }}">View</a>
 
                 </div>
             </form>
         </div>
+
     </div>
     <div class="card-body">
         <p class="fs-6 fw-light text-muted">

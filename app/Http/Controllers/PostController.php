@@ -7,6 +7,14 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+
+    public function show(Post $post) {
+
+        return view('posts.show',[
+            'post' => $post
+        ]);
+    }
+
     public function store()
     {
 
@@ -24,10 +32,10 @@ class PostController extends Controller
         return redirect()->route('dashboard')->with('success', 'Post created successfully.');
     }
 
-    public function destroy($id){
+    public function destroy(Post $post){
         // where id=1
-        $post = Post::where('id',$id)->first();
         $post->delete();
+        
         return redirect()->route('dashboard')->with('success', 'Post deleted successfully.');
     }
 }
